@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
 
   has_secure_password
 
+  has_many :microposts
+
   def User.new_remember_token
     SecureRandom.urlsafe_base64
   end
